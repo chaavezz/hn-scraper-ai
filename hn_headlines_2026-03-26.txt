@@ -1,0 +1,34 @@
+HACKER NEWS HEADLINES
+FECHA: 2026-03-26
+FUENTE: https://news.ycombinator.com/
+------------------------------------
+1. Personal Encyclopedias
+2. Swift 6.3
+3. Show HN: Relay – The open-source Claude Cowork for OpenClaw
+4. Running Tesla Model 3's computer on my desk using parts from crashed cars
+5. Obsolete Sounds
+6. From zero to a RAG system: successes and failures
+7. What came after the 486?
+8. ARC-AGI-3
+9. Shell Tricks That Make Life Easier (and Save Your Sanity)
+10. The truth that haunts the Ramones: 'They sold more T-shirts than records'
+11. Niche Museums
+12. Ashby (YC W19) Is Hiring Engineers Who Make Product Decisions
+13. The Cassandra of 'The Machine'
+14. Earthquake scientists reveal how overplowing weakens soil at experimental farm
+15. The Last Contract: William T. Vollmann's Battle to Publish an Epic (2025)
+16. More precise elevation data for GraphHopper routing engine
+17. My DIY FPGA board can run Quake II
+18. The EU still wants to scan  your private messages and photos
+19. 90% of Claude-linked output going to GitHub repos w <2 stars
+20. Show HN: Robust LLM Extractor for Websites in TypeScript
+21. Supreme Court Sides with Cox in Copyright Fight over Pirated Music
+22. Show HN: Optio – Orchestrate AI coding agents in K8s to go from ticket to PR
+23. "Disregard That" Attacks
+24. Two studies in compiler optimisations
+25. Maxell MXCP-P100 – wireless cassette player
+26. Thoughts on slowing the fuck down
+27. False claims in a widely-cited paper
+28. Quantization from the Ground Up
+29. Government agencies buy commercial data about Americans in bulk
+30. Apple randomly closes bug reports unless you "verify" the bug remains unfixed
