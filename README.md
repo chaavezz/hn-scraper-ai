@@ -1,41 +1,57 @@
-# Hacker News Scraper
+Hacker News Scraper
 
-Simple Python project that scrapes headlines from Hacker News and saves them into a dated text file.
+Simple Python project that scrapes headlines from Hacker News and saves them into both a structured JSON file and a readable TXT report.
 
-## Features
+Features
+	•	Connects to Hacker News
+	•	Extracts current headlines and their URLs
+	•	Stores data in structured format (JSON)
+	•	Generates a clean and readable TXT report
+	•	Automatically names output files with the current date
 
-- Connects to Hacker News
-- Extracts current headlines
-- Saves results into a `.txt` file
-- Generates the output file automatically with the current date
-
-## How to run
-
-1. Activate the virtual environment
-2. Run the script:
+How to run
+	1.	Activate the virtual environment
+	2.	Run the script:
 
 python main.py
 
-## Output
+Output
 
-The program generates a file like:
+The program generates two files:
 
-hn_headlines_2026-03-26.txt
+hn_headlines_YYYY-MM-DD.txt
+hn_headlines_YYYY-MM-DD.json
 
-The file contains:
+TXT file
 
-- Project title
-- Date
-- Source URL
-- Numbered list of headlines
+Human-readable report containing:
+	•	Project title
+	•	Date
+	•	Source URL
+	•	Numbered list of headlines with links
 
-## Tech used
+JSON file
 
-- Python
-- requests
-- BeautifulSoup
+Structured data format containing:
+	•	Title of each headline
+	•	URL of each headline
 
-## Notes
+Tech used
+	•	Python
+	•	requests
+	•	BeautifulSoup
+	•	json
 
-- If the request fails, the program stops and shows an error message
-- The scraper currently works with the Hacker News homepage
+Notes
+	•	If the request fails, the program stops and shows an error message
+	•	The scraper is currently designed for the Hacker News homepage
+	•	JSON output can be used for further processing, automation, or integration with AI tools
+
+Purpose
+
+This project demonstrates:
+	•	Web scraping
+	•	HTML parsing
+	•	Data structuring
+	•	File generation (TXT + JSON)
+	•	Basic error handling in Python
