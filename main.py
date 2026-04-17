@@ -3,46 +3,47 @@ import datetime
 from bs4 import BeautifulSoup
 import json
 
-base_url = "https://news.ycombinator.com/"
-fecha = datetime.date.today()
-nombre_txt= f"hn_headlines_{fecha}.txt"
-nombre_json = f"hn_headlines_{fecha}.json"
+
 
 def main():
+    base_url = "https://news.ycombinator.com/"
+    today = datetime.date.today()
+    txt_filename= f"hn_headlines_{today}.txt"
+    json_filename = f"hn_headlines_{today}.json"
     try:
-        respuesta = requests.get(base_url, timeout=10)
-        soup = BeautifulSoup(respuesta.text, "html.parser")
+        response = requests.get(base_url, timeout=10)
+        soup = BeautifulSoup(response.text, "html.parser")
     except requests.exceptions.RequestException as e:
-        print("Error en la petición:", e)
+        print("Request error:", e)
         return
         
     links = soup.find_all("span", class_="titleline")
-    datos = []
+    data = []
     for link in links:
-        titulo = link.find("a")
-        link_url = titulo["href"]
-        noticia = {
-            "Titulo": titulo.text,
+        title = link.find("a")
+        link_url = title["href"]
+        item = {
+            "title": title.text,
             "url": link_url
             }
-        datos.append(noticia)
-    with open(nombre_json, "w") as f:
-        json.dump(datos,f, indent=4)
+        data.append(item)
+    with open(json_filename, "w") as f:
+        json.dump(data,f, indent=4)
 
-    with open(nombre_txt, "w") as f:
+    with open(txt_filename, "w") as f:
         f.write("HACKER NEWS HEADLINES\n")
-        f.write(f"FUENTE: {base_url}\n")
-        f.write(f"FECHA: {fecha}\n")
+        f.write(f"SOURCE: {base_url}\n")
+        f.write(f"DATE: {today}\n")
         f.write("--------------------------\n\n")
 
-        for i, noticia in enumerate(datos, start=1):
-            f.write(f"{i}. {noticia['Titulo']}\n")
-            f.write(f"{noticia['url']}\n\n")
+        for i, item in enumerate(data, start=1):
+            f.write(f"{i}. {item['title']}\n")
+            f.write(f"{item['url']}\n\n")
             
             
-    print(f"Archivo JSON generado: {nombre_json}")
-    print(f"Archivo TXT generado: {nombre_txt}")
-    print(f"Titulares guardados: {len(links)}")
+    print(f"JSON file generated: {json_filename}")
+    print(f"TXT file generated: {txt_filename}")
+    print(f"Total headlines: {len(data)}")
 
 if __name__ == "__main__":
     main()
