@@ -3,10 +3,10 @@ import datetime
 from bs4 import BeautifulSoup
 import json
 
-
+base_url = "https://news.ycombinator.com/"
 
 def main():
-    base_url = "https://news.ycombinator.com/"
+    
     today = datetime.date.today()
     txt_filename= f"hn_headlines_{today}.txt"
     json_filename = f"hn_headlines_{today}.json"
